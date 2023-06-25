@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./NavBar"
+import ItemListContainer from "./ItemListContainer"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar/>
+
+      <main className="grow lineaAbajo mx-5">
+        <ItemListContainer saludo='Bienvenido Ricardo' de='al mundo de React'/>
+      </main>
+
+      <footer className="mx-5">
+        <p>Copyright Ricardo Salas</p>
+      </footer>
+    </>
   );
 }
 
