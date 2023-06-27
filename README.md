@@ -7,6 +7,7 @@ En el directorio del proyecto tu puedes ejecutar:
 ### `npm start`
 
 Corre la aplicación en modo "development"
+
 Abre link [http://localhost:3000](http://localhost:3000) para ver en su browser.
 
 ## Componentes programados
