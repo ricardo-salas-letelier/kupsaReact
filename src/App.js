@@ -5,10 +5,8 @@ function App() {
   return (
     <>
       <NavBar/>
+      <ItemListContainer />
 
-      <main className="grow lineaAbajo mx-5">
-        <ItemListContainer saludo='Bienvenido Ricardo' de='al mundo de React'/>
-      </main>
 
       <footer className="mx-5">
         <p>Copyright Ricardo Salas</p>
