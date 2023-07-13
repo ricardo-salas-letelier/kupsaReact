@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kupsaReact/static/css/main.0847e989.css",
+    "main.js": "/kupsaReact/static/js/main.42660e32.js",
+    "index.html": "/kupsaReact/index.html",
+    "main.0847e989.css.map": "/kupsaReact/static/css/main.0847e989.css.map",
+    "main.42660e32.js.map": "/kupsaReact/static/js/main.42660e32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0847e989.css",
+    "static/js/main.42660e32.js"
+  ]
+}
