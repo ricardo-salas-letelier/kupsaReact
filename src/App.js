@@ -10,7 +10,7 @@ function App() {
     // ACCCIONES
     // VISTA
     return (
-      <BrowserRouter basename="/kupsa">
+      <BrowserRouter >
           <NavBar/>
           <Routes>
             <Route path="/" element={<ItemListContainer />}></Route>
