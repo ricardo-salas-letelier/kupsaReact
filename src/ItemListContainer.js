@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList"
+import { useParams } from "react-router-dom";
+import productosJson from "./json/productos.json"
 
 function ItemListContainer(props) {
     // ESTADOS
     const [productos,setProductos] = useState([])
+    const parametros = useParams()
+
     // EFECTOS
     useEffect(function() {
-        cargarProductos()
-        return () => {  }
-    }, []);
+        let filtrados = []
+        if (parametros.id === undefined) {
+            filtrados = productosJson
+        } else {
+            filtrados = productosJson.filter((item) => {return item.categoria === parametros.id})
+        }
+        setProductos(filtrados)
+    }, [parametros.id]);
+
     // ACCCIONES
-    function cargarProductos() {
-        // Leer archivo json
-        const file = "./json/productos.json";
-        fetch(file)
-            .then(respuesta =>  respuesta.json())
-            .then((prds) => {
-                setProductos(prds)
-            })
-            .catch(error => console.log("ERROR. Problemas al cargar productos", error))
-    }
+
     // VISTA
     return (
         <div className="bg-white lineaAbajo mx-5">

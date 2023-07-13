@@ -8,7 +8,7 @@ function ItemList(props) {
     return (
         <>
             {props.productos.map((producto) => (
-                <Item producto={producto} />
+                <Item key={producto.codigo} producto={producto} />
             ))}
         </>
     );

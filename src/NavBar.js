@@ -7,7 +7,7 @@ import {
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
-  //SquaresPlusIcon,
+  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { 
@@ -17,9 +17,10 @@ import {
 } from '@heroicons/react/20/solid'
 
  const products = [
-  { name: 'Camas', description: 'Las mejores camas para dormitorio', href: '#', icon: ChartPieIcon },
-  { name: 'Banquetas', description: 'Para colocar a los pies de su cama', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Veladores', description: 'El apoyo para su cama', href: '#', icon: FingerPrintIcon },
+  { name: 'Camas', description: 'Las mejores camas para tu descanso', href: '/category/cama/', icon: ChartPieIcon },
+  { name: 'Banquetas', description: 'Para colocar a los pies de tu cama', href: '/category/banqueta/', icon: CursorArrowRaysIcon },
+  { name: 'Veladores', description: 'El apoyo para tu cama', href: '/category/velador/', icon: FingerPrintIcon },
+  { name: 'Todos los productos', description: 'Para tu dormitorio', href: '/', icon: SquaresPlusIcon },
 ]
 
 function classNames(...classes) {
@@ -33,9 +34,9 @@ export default function NavBar() {
     <header className="bg-white lineaAbajo mx-5">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-                <a href="." className="-m-1.5 p-1.5">
+                <a href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Kupsa</span>
-                    <img className="h-10 w-auto" src="./logo_nombre.png" alt="Kupsa" />
+                    <img className="h-20 w-auto" src="/logo_nombre.png" alt="Kupsa" />
                 </a>
             </div>
             <div className="flex lg:hidden">

@@ -9,7 +9,7 @@ function Item(props) {
     // VISTA
     return (
         <>
-            <a key={props.producto.codigo} href="." className="group">
+            <a key={props.producto.codigo} href={"/producto/"+props.producto.codigo} className="group">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img
                     src={props.producto.imagen}
