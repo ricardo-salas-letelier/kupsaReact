@@ -14,6 +14,12 @@ Abre link [http://localhost:3000](http://localhost:3000) para ver en su browser.
 1. NavBar.js
 2. CartWidget.js
 3. ItemListContainer.js
+4. ItemList.js
+5. Item.js
+6. ItemDetailContainer.js
+7. ItemDetail.js
+8. ItemCount.js
+9. ViewAddCart.js
 
 ## Modulos instalados
 * @headlessui/react: 1.7.15
