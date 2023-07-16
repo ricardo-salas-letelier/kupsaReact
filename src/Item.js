@@ -1,5 +1,6 @@
 import ViewAddCart from "./ViewAddCart"
 import ViewAddHeart from "./ViewAddHeart"
+import {Link} from "react-router-dom"
 
 function Item(props) {
     // ESTADOS
@@ -9,7 +10,7 @@ function Item(props) {
     // VISTA
     return (
         <>
-            <a key={props.producto.codigo} href={"/producto/"+props.producto.codigo} className="group">
+            <Link key={props.producto.codigo} to={"/producto/"+props.producto.codigo} className="group">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     <img
                     src={props.producto.imagen}
@@ -23,7 +24,7 @@ function Item(props) {
                     <ViewAddHeart codigo={props.producto.codigo} texto={'Sumar a lista deseos'}/>
                     <ViewAddCart codigo={props.producto.codigo} texto={'Sumar al carrito'}/> 
                 </div>
-            </a>
+            </Link>
         </>
     );
 }

@@ -5,7 +5,7 @@ function ItemDetail(props) {
     // EFECTOS
     // ACCCIONES
     //const formatNumber = () => props.producto.precio.toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })
-    console.log(props)
+    //console.log(props)
     
     // VISTA
     return (
