@@ -4,8 +4,7 @@ function ItemDetail(props) {
     // ESTADOS    
     // EFECTOS
     // ACCCIONES
-    //const formatNumber = () => props.producto.precio.toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })
-    //console.log(props)
+    const formatNumber = () => parseInt(props.producto.precio).toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })
     
     // VISTA
     return (
@@ -41,7 +40,7 @@ function ItemDetail(props) {
                         {/* Options */}
                         <div className="mt-4 lg:row-span-3 lg:mt-0">
                             <h2 className="sr-only">Product information</h2>
-                            <p className="text-3xl tracking-tight text-gray-900">{props.producto.precio}</p>
+                            <p className="text-3xl tracking-tight text-gray-900">{formatNumber()}</p>
 
                             <form className="mt-10">
                                 <ItemCount stock={props.producto.stock} onAdd="" />
