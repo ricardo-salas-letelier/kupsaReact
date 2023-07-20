@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import productosJson from "./json/productos.json"
+import productosJson from "../json/productos.json"
 import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer() {

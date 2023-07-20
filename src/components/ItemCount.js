@@ -4,13 +4,15 @@ import ViewAddCart from "./ViewAddCart"
 function ItemCount(props) {
     // ESTADOS
     const [cantidad, setCantidad] = useState(0)
+
     // EFECTOS
+
     // ACCCIONES
     const handleSumar = () => {
-        if (props.stock > cantidad) { 
+        if (props.producto.stock > cantidad) { 
             setCantidad(cantidad + 1)
         } else {
-            console.log("ATENCION. No puede comprar mas de lo que hay en stock: ", props.stock,".")
+            console.log("ATENCION. No puede comprar mas de lo que hay en stock: ", props.producto.stock,".")
         }
     }
     const handleRestar = () => {
@@ -20,7 +22,7 @@ function ItemCount(props) {
             console.log("ATENCION. No puede comprar 0 productos!")
         } 
     }
-    if (props.stock > 0) {
+    if (props.producto.stock > 0) {
         return (
             <>
                 <div className="flex flex-row gap-3">
@@ -40,8 +42,8 @@ function ItemCount(props) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
                         </svg>
-                    </button>  
-                    <ViewAddCart/>
+                    </button>
+                    <ViewAddCart producto={props.producto} cantidad={cantidad}/>
                 </div>          
             </>
         );

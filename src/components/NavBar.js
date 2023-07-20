@@ -20,9 +20,9 @@ import {
 } from '@heroicons/react/20/solid'
 
  const products = [
-  { name: 'Camas', description: 'Las mejores camas para tu descanso', href: '/category/cama/', icon: ChartPieIcon },
-  { name: 'Banquetas', description: 'Para colocar a los pies de tu cama', href: '/category/banqueta/', icon: CursorArrowRaysIcon },
-  { name: 'Veladores', description: 'El apoyo para tu cama', href: '/category/velador/', icon: FingerPrintIcon },
+  { name: 'Camas', description: 'Las mejores camas para tu descanso', href: '/category/camas/', icon: ChartPieIcon },
+  { name: 'Banquetas', description: 'Para colocar a los pies de tu cama', href: '/category/banquetas/', icon: CursorArrowRaysIcon },
+  { name: 'Veladores', description: 'El apoyo para tu cama', href: '/category/veladores/', icon: FingerPrintIcon },
   { name: 'Todos los productos', description: 'Para tu dormitorio', href: '/', icon: SquaresPlusIcon },
 ]
 

@@ -43,7 +43,7 @@ function ItemDetail(props) {
                             <p className="text-3xl tracking-tight text-gray-900">{formatNumber()}</p>
 
                             <form className="mt-10">
-                                <ItemCount stock={props.producto.stock} onAdd="" />
+                                <ItemCount producto={props.producto} onAdd="" />
                             </form>
                         </div>
 

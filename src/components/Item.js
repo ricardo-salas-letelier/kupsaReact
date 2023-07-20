@@ -22,7 +22,7 @@ function Item(props) {
                 <p className="mt-1 text-lg font-medium text-gray-900">{formatNumber()}</p>
                 <div className="flex flex-row gap-1">
                     <ViewAddHeart codigo={props.producto.codigo} texto={'Sumar a lista deseos'}/>
-                    <ViewAddCart codigo={props.producto.codigo} texto={'Sumar al carrito'}/> 
+                    <ViewAddCart producto={props.producto} cantidad="1"/> 
                 </div>
             </Link>
         </>
