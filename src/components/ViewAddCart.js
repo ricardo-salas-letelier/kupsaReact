@@ -11,43 +11,7 @@ export default function ViewAddCart(props) {
     const handleAgregar = (e) => {
         e.preventDefault()
         setMensaje("")
-        if (props.cantidad > 0) {
-            // Copiar arreglo
-            let aux = JSON.parse(JSON.stringify(valores.carrito))
-            let index = aux.findIndex((item) => {return item.codigo === props.producto.codigo})
-            // Si producto existe en el carrito
-            if (index !== -1) {
-                // Validar que no supere el stock disponible
-                if ((aux[index].cantidad + props.cantidad) <= props.producto.stock) {
-                    aux[index].cantidad = aux[index].cantidad + parseInt(props.cantidad)
-                    //console.log(aux[index])
-                } else {
-                    setMensaje("ATENCIÓN. No puede compra mas productos de lo que permite el stock disponible: "+props.producto.stock)
-                }
-            // Si producto NO existe en el carrito
-            } else {
-                // Agregar producto
-                const prd = {
-                    codigo:props.producto.codigo,
-                    nombre:props.producto.nombre,
-                    precio:props.producto.precio,
-                    cantidad:parseInt(props.cantidad),
-                    imagen:props.producto.imagen,
-                    categoria:props.producto.categoria
-                }
-                aux.push(prd)
-                //console.log(prd)
-            }  
-            // Actualizar total para CartWidget
-            let t = aux.reduce((acumulador, elemento) => acumulador + elemento.cantidad, 0)
-            valores.setTotal(t)
-            //console.log("Total: ", t)
-            // Actualizar carrito del contexto
-            valores.setCarrito(aux) 
-            //console.log(valores.carrito)
-        } else {
-            setMensaje("ATENCIÓN. No tiene sentido agregar 0 producto.")
-        }     
+        setMensaje(valores.agregarProductoAlCarrito(props.producto, props.cantidad))
     }    
     // VISTA
     if(props.producto.stock > 0) {

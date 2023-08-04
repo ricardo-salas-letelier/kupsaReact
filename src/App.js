@@ -4,7 +4,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import CartContextProvider from "./context/CartContext"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
     // ESTADOS

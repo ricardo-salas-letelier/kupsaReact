@@ -22,6 +22,8 @@ function ItemCount(props) {
             console.log("ATENCION. No puede comprar 0 productos!")
         } 
     }
+    
+    // VISTA
     if (props.producto.stock > 0) {
         return (
             <>
