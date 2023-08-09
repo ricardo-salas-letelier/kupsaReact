@@ -10,7 +10,12 @@ export default function ViewAddCart(props) {
     // ACCCIONES
     const handleAgregar = (e) => {
         e.preventDefault()
-        toast.info(valores.agregarProductoAlCarrito(props.producto, props.cantidad))
+        let mensaje = ""
+        mensaje = valores.agregarProductoAlCarrito(props.producto, props.cantidad)
+        if (mensaje !== "") {
+            toast.info(mensaje)
+        }
+        
     }    
     // VISTA
     if(props.producto.stock > 0) {
