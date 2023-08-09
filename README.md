@@ -1,7 +1,7 @@
 # Kupsa Muebles
 Aplicación de comercio electronico
 
-Para ver video has clic [aquí](https://youtu.be/gq4p4klSvEQ)
+[Ver video has clic aquí](https://youtu.be/gq4p4klSvEQ)
 
 # Aplicación con Create React App
 
