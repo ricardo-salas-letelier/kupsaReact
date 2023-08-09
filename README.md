@@ -1,4 +1,9 @@
-# Kupsa, aplicación con Create React App
+# Kupsa Muebles
+Aplicación de comercio electronico
+
+Para ver video has clic [aquí](https://github.com/ricardo-salas-letelier/kupsaReact/blob/master/VIDEO%20-%20Kupsa%20Muebles%20%E2%80%94%202023-08-08%2022-39-57.mp4)
+
+# Aplicación con Create React App
 
 Este proyecto fue "bootstrapped" con [Create React App](https://github.com/facebook/create-react-app).
 
