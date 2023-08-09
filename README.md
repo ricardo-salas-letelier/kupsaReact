@@ -32,7 +32,9 @@ Abre link [http://localhost:3000](http://localhost:3000) para ver en su browser.
 ## src
 1. App.js
 2. FirebaseConfig.js
-3. Utils.js
+3. index.css
+4. index.js
+5. Utils.js
 
 ## Modulos instalados
 * @headlessui/react: 1.7.15
