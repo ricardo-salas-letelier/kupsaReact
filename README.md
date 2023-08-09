@@ -1,7 +1,7 @@
 # Kupsa Muebles
 Aplicación de comercio electronico
 
-Para ver video has clic [aquí](https://github.com/ricardo-salas-letelier/kupsaReact/blob/master/VIDEO%20-%20Kupsa%20Muebles%20%E2%80%94%202023-08-08%2022-39-57.mp4)
+Para ver video has clic [aquí](https://youtu.be/gq4p4klSvEQ)
 
 # Aplicación con Create React App
 
