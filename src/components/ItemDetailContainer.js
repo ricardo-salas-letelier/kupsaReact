@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail"
 import { traerMueblesPorCodigo } from "../Utils";
+import { toast } from "react-toastify"
 
 function ItemDetailContainer() {
     // ESTADOS
@@ -17,13 +18,13 @@ function ItemDetailContainer() {
             if (resultado !== undefined) {
                 setProducto(resultado)        
             } else {
-                console.log("ATENCION. Producto con código:", parametros.codigo, ", no existe.")
+                toast.info("ATENCION. Producto con código:"+ parametros.codigo+ ", no existe.")
             }
             setCargando(false)
         })
         .catch(() => {
-            console.log("ERROR. Problemas para traer mueble desde base de datos.")
-        })
+            toast.error("ERROR. Problemas para traer mueble desde base de datos.")
+       })
     }, [parametros.codigo]);
 
     // ACCCIONES

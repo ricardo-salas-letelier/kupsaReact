@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
 import { traerMuebles, traerMueblesPorCategoria } from "../Utils";
+import { toast } from "react-toastify"
 
 function ItemListContainer(props) {
     // ESTADOS
@@ -26,7 +27,7 @@ function ItemListContainer(props) {
             setCargando(false)
         })
         .catch(() => {
-            console.log("ERROR. Problemas para traer datos desde base de datos.")
+            toast.error("ERROR. Problemas para traer mueble desde base de datos.")
         })
 
     }, [parametros.id]);

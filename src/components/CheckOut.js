@@ -5,8 +5,9 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { serverTimestamp } from "firebase/firestore"
 import { guardarOrden } from "../Utils";
+import { toast } from "react-toastify"
 
-function ShoppingCart(props) {
+function Checkout(props) {
     // ESTADOS
     const valores = useContext(contexto)
     // EFECTOS
@@ -22,21 +23,21 @@ function ShoppingCart(props) {
                 productos : valores.carrito,
                 usuario : "j.perez",
                 correo : "j.prez@gmail.com",
+                estado : "generada",
                 fecha : serverTimestamp()
             }
             // Grabar
             guardarOrden(data)
             .then((resultado) => {
-                console.log(resultado.id)
+                toast.info("Felicitaciones por la compra. Su numero de orden es: "+resultado.id)
             })
             .catch(() => {
-                console.log("ERROR. Problemas para grabar orden en base de datos.")
+                toast.error("ERROR. Problemas para grabar orden en base de datos.")
             })
             // Vaciar carrito
             valores.vaciarCarrito()
-            console.log("Grabar")
         } else {
-            console.log("ATENCION. No puede grabar orden con 0 productos!")
+            toast.info("ATENCION. No puede grabar orden con 0 productos!")
         } 
     }
 
@@ -164,4 +165,4 @@ function ShoppingCart(props) {
     );
 }
 
-export default ShoppingCart;
+export default Checkout;

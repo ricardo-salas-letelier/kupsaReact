@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ViewAddCart from "./ViewAddCart"
+import { toast } from "react-toastify"
 
 function ItemCount(props) {
     // ESTADOS
@@ -12,14 +13,15 @@ function ItemCount(props) {
         if (props.producto.stock > cantidad) { 
             setCantidad(cantidad + 1)
         } else {
-            console.log("ATENCION. No puede comprar mas de lo que hay en stock: ", props.producto.stock,".")
+            toast.info("ATENCION. No puede comprar mas de lo que hay en stock: "+ props.producto.stock+".")
+
         }
     }
     const handleRestar = () => {
         if (cantidad > 0) {
             setCantidad(cantidad - 1)
         } else {
-            console.log("ATENCION. No puede comprar 0 productos!")
+            toast.info("ATENCION. No puede comprar 0 productos!")
         } 
     }
     

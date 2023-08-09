@@ -1,6 +1,7 @@
 import {contexto} from "../context/CartContext"
 import { useContext, useState } from "react"
-import ShoppingCart from './ShoppingCart';
+
+import CheckOut from "./CheckOut"
 
 function CartWidget() {
     // ESTADOS
@@ -31,7 +32,7 @@ function CartWidget() {
               <p className="text-xs">{valores.totalCantidad}</p>
             </div>
           </button>
-          <ShoppingCart abrir={abrir} onClose={handleClose}/>
+          <CheckOut abrir={abrir} onClose={handleClose}/>
         </div>
       </>
     );

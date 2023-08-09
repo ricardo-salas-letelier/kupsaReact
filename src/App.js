@@ -4,6 +4,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import CartContextProvider from "./context/CartContext"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     // ESTADOS
@@ -23,7 +24,9 @@ function App() {
               <p>Copyright Ricardo Salas</p>
             </footer>
         </BrowserRouter>
+        <ToastContainer/>
       </CartContextProvider>
+      
     );
 }
 
